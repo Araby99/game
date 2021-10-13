@@ -9,7 +9,8 @@ const mission = [
             },
             {
                 name: "Expecto Patronum",
-                answer: true
+                answer: true,
+                duration: 2700
             }
         ]
     }

@@ -43,16 +43,109 @@
 }
 .mission img {
     height: 400px;
+    animation: mission 3s linear infinite;
+}
+@keyframes mission {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0, 5%);
+    }
+    75% {
+        transform: translate(0, -5%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.bag {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    z-index: 5;
+}
+.bag-img {
+    padding: 10px;
+    border: solid 2px #000;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+}
+.bag-img:hover img {
+    animation: mission 1s linear infinite;
+}
+.bag-img img {
+    height: 100%;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+.bag-contect {
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 10px;
+    display: none;
+    flex-wrap: wrap;
+    transition: .5s;
+    margin: 10px;
+}
+.bag-contect .bag-item {
+    border: solid 1px #000;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+.bag-contect .bag-item:hover {
+    box-shadow: 0 0 10px 0 #000;
+}
+.bag-contect .bag-item img {
+    height: 80px;
+}
+.coin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    z-index: 5;
+}
+.coin img {
+    height: 50px;
+    margin-right: 10px;
 }
 
 @media (max-width: 1200px) {
+    body {
+        width: 100vw;
+        overflow: hidden;
+    }
     .mission img {
-        height: 300px;
+        height: 150px;
     }
     .char img {
-        height: 250px;
+        height: 200px;
     }
     .char .dialog {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        padding: 10px 15px;
+        width: 80vw;
+    }
+    .bag-img {
+        height: 70px;
+        width: 70px;
+    }
+    .bag-contect .bag-item img {
+        height: 40px;
+    }
+    .bag-contect .bag-item h5 {
+        font-size: .8rem;
     }
 }
